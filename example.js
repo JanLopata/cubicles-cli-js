@@ -1,17 +1,17 @@
-var o = {
-	width: 11,
-	height: 5
-}
-var d = new ROT.Display(o);
-document.body.appendChild(d.getContainer());
+const dimensions = {
+    width: 79,
+    height: 23
+};
+const display = new ROT.Display(dimensions);
+document.body.appendChild(display.getContainer());
 
-for (var i=0; i<o.width; i++) {
-	for (var j=0; j<o.height; j++) {
-		if (!i || !j || i+1 == o.width || j+1 == o.height) {
-			d.draw(i, j, "#", "gray");
-		} else {
-			d.draw(i, j, ".", "#666");
-		}
-	}
+for (let i = 0; i < dimensions.width; i++) {
+    for (let j = 0; j < dimensions.height; j++) {
+        if (!i || !j || i + 1 === dimensions.width || j + 1 === dimensions.height) {
+            display.draw(i, j, "#", "gray");
+        } else {
+            display.draw(i, j, ".", "dimgray");
+        }
+    }
 }
-d.draw(o.width >> 1, o.height >> 1, "@", "goldenrod");
+display.draw(dimensions.width >> 1, dimensions.height >> 1, "@", "goldenrod");
