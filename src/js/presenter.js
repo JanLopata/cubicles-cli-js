@@ -8,7 +8,7 @@ const known_entities = {
 
 function presentState(data) {
 
-    console.log(data)
+    // console.log(data)
     const rendering_data = data['rendered_state']
     for (let i = 1; i < rendering_data['size_x']; i++) {
         for (let j = 1; j < rendering_data['size_y']; j++) {
