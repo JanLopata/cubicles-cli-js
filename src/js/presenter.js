@@ -12,7 +12,7 @@ function presentState(data) {
     const rendering_data = data['rendered_state']
     for (let i = 1; i < rendering_data['size_x']; i++) {
         for (let j = 1; j < rendering_data['size_y']; j++) {
-            display.draw(i, j, ".", "dimgray");
+            display.draw(i, j + 1, ".", "dimgray");
         }
     }
 
@@ -22,8 +22,11 @@ function presentState(data) {
             if (presenting_detail == null) {
                 presenting_detail = ['X', 'red'];
             }
-            display.draw(entity.x, entity.y, presenting_detail[0], presenting_detail[1])
+            display.draw(entity.x, entity.y + 1, presenting_detail[0], presenting_detail[1])
         }
     )
+
+    display.drawText(1, 0, "Level: " + data['rendered_state']['level_number'] + ' ')
+    display.drawText(12, 0, "Disappears caused: " + data['player_kills'] + ' ')
 
 }
