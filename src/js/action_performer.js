@@ -3,7 +3,7 @@ function move(playerId, dir) {
 
     jQuery.ajax({
         type: "POST",
-        url: 'http://localhost:8080//simple-rest/' + playerId + '/move/' + dir,
+        url: 'http://85.255.0.40:8080//simple-rest/' + playerId + '/move/' + dir,
         async: false,
         dataType: 'json',
         success(json) {
@@ -20,7 +20,7 @@ function activate(playerId) {
 
     jQuery.ajax({
         type: "POST",
-        url: 'http://localhost:8080//simple-rest/' + playerId + '/activate/level-item',
+        url: 'http://85.255.0.40:8080//simple-rest/' + playerId + '/activate/level-item',
         async: false,
         dataType: 'json',
         success(json) {

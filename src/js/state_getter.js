@@ -2,7 +2,7 @@ function getState(playerId) {
     let my_data = null
 
     jQuery.ajax({
-        url: 'http://localhost:8080//simple-rest/' + playerId + '/state',
+        url: 'http://85.255.0.40:8080//simple-rest/' + playerId + '/state',
         async: false,
         dataType: 'json',
         success(json) {
